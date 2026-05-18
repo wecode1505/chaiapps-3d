@@ -76,7 +76,7 @@ export default function Home() {
             {/* The Image inside the 3D Card */}
             <div style={{ transform: "translateZ(40px)" }} className="w-full h-[65%] rounded-2xl overflow-hidden relative shadow-[0_15px_35px_rgba(0,0,0,0.4)] border border-amber-900/50">
               <img 
-                src="https://images.unsplash.com/photo-1576092762791-dd9e2220afa1?q=80&w=800" 
+                src="https://images.unsplash.com/photo-1541167760496-1628856ab772?q=80&w=1000" 
                 alt="Steaming Hot Chai" 
                 className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 ease-out"
               />
