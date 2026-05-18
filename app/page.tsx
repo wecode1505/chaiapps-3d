@@ -1,5 +1,7 @@
 "use client";
 import { motion, useMotionValue, useTransform } from "framer-motion";
+import Link from "next/link";
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   // 3D Parallax Mouse Tracking Engine
@@ -26,12 +28,15 @@ export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden selection:bg-amber-500/30 flex items-center justify-center px-6">
       
+      {/* The Premium Navbar */}
+      <Navbar />
+      
       {/* Ambient Cafe Lighting */}
       <div className="fixed inset-0 z-0 bg-[radial-gradient(ellipse_at_top_right,rgba(217,119,6,0.15),transparent_50%)] pointer-events-none" />
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-amber-600/10 blur-[150px] rounded-full pointer-events-none z-0" />
 
       {/* Main Content Grid */}
-      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center z-10">
+      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center z-10 pt-16">
         
         {/* Left Side: Typography */}
         <motion.div 
@@ -54,9 +59,12 @@ export default function Home() {
             Dive into a handcrafted menu of authentic chai, artisan wraps, and premium cold frappes.
           </p>
           <div className="flex gap-4 mt-10">
-            <button className="bg-amber-600 hover:bg-amber-500 text-amber-50 font-bold px-8 py-4 rounded-xl text-sm uppercase tracking-wider transition-all shadow-[0_10px_30px_rgba(217,119,6,0.2)]">
-              View Menu
-            </button>
+            {/* Navigates directly to the new Menu page */}
+            <Link href="/menu">
+              <button className="bg-amber-600 hover:bg-amber-500 text-amber-50 font-bold px-8 py-4 rounded-xl text-sm uppercase tracking-wider transition-all shadow-[0_10px_30px_rgba(217,119,6,0.2)]">
+                View Menu
+              </button>
+            </Link>
           </div>
         </motion.div>
 
