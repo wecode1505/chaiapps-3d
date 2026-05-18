@@ -1,13 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-body {
-  background-color: #0d0906;
-  color: #fffbeb;
+@layer base {
+  body {
+    background-color: #0d0906;
+    color: #fffbeb;
+  }
 }
 
-/* Custom utility for 3D perspective */
-.perspective-1000 {
-  perspective: 1000px;
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
 }
